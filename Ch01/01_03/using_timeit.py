@@ -29,3 +29,9 @@ if __name__ == '__main__':
     # Key is missing from the dictionary
     print('catch', timeit('use_catch("x")', 'from __main__ import use_catch'))
     print('get', timeit('use_get("x")', 'from __main__ import use_get'))
+
+# Can test in ipython:
+# In ipython (in terminal), use %run -n using_timeit.py
+# the -n tells the command line not to load the main function
+# only the functions
+# then %timeit use_get('a')
