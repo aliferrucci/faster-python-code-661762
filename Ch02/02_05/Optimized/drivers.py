@@ -53,6 +53,9 @@ def test_find_closest(kd=False):
         assert distance(driver, loc) >= min_dist
 
 
+# Test in ipython
+# tree = KDTree(drivers)
+# timeit find closest_kd((lat, lng), tree)
 if __name__ == '__main__':
     test_find_closest()
     test_find_closest(kd=True)

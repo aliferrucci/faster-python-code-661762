@@ -42,5 +42,11 @@ def test_find_closest():
         assert distance(driver, loc) >= min_dist
 
 
+# Test in ipython
+# %run drivers.py
+# lat, lng = 34.3852712, -119.487444
+# drivers = gen_drivers(lat, lng)
+# %timeit find_closest((lat, lng), drivers)
+# profile it: %prun find_closest((lat, lng), drivers)
 if __name__ == '__main__':
     test_find_closest()
