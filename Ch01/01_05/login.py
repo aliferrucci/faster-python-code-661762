@@ -22,6 +22,14 @@ def encrypt_passwd(passwd):
     return crypt(passwd, salt)
 
 
+# Test results of decorator using in terminal:
+# kernprof -l prof.py
+# to view results: python -m line_profiler prof.py.lprof
+# In ipython (must remove @profile decorator):
+# %run -n prof.py and then cases = list(gen_cases(1000))
+# %load_ext line_profiler
+# %lprun -f login bench_login(cases)
+# @profile
 def login(user, password):
     """Return True is user/password pair matches"""
     try:
