@@ -3,6 +3,7 @@
 cutoffs = [60, 70, 80, 90]
 names = 'FDCBA'
 
+
 def grade(score):
     """Give a letter grade from numeric score
 
@@ -13,6 +14,7 @@ def grade(score):
         if score < cutoff:
             return name
     return 'A'
+
 
 def test_grades():
     cases = [
@@ -28,6 +30,10 @@ def test_grades():
     for score, expected in cases:
         assert grade(score) == expected
 
+
+# Run in ipython with:
+# %run grades.py
+# %timeit grade(74)
+# and with the optimized version: timeit grade2(74)
 if __name__ == '__main__':
     test_grades()
-   

@@ -41,7 +41,7 @@ def test_queue(count=100, cls=TaskQueue):
         assert tq.pop() == i
         assert len(tq) == count - i - 1
 
-
+# Run in ipython timeit test_queue(100, cls=TaskQueue)
 if __name__ == '__main__':
     test_queue()
     test_queue(cls=DTaskQueue)

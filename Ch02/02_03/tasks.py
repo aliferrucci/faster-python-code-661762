@@ -1,7 +1,9 @@
 """Task queue - deque example"""
 
+
 class TaskQueue:
     """Task queue using list"""
+
     def __init__(self):
         self._tasks = []
 
@@ -27,6 +29,6 @@ def test_queue(count=100):
         assert len(tq) == count - i - 1
 
 
+# Run similar to grades.py
 if __name__ == '__main__':
     test_queue()
-  

@@ -5,6 +5,7 @@ from random import random, seed, randint
 
 class PriorityQueue:
     """Priority queue using list + sort"""
+
     def __init__(self):
         self._tasks = []
 
@@ -68,6 +69,11 @@ def benchmark_pq(cases):
             pq.push(f'task {i}', case)
 
 
+# Run this in ipython using benchmarking tools
+# by doing this we will exclude the time it takes to generate cases
+# %run ptasks.py
+# cases = gen_cases(10000)
+# %timeit benchmark_pq(cases)
+# %prun benchmark_pq(cases) # Profile the code
 if __name__ == '__main__':
     test_pqueue()
-    

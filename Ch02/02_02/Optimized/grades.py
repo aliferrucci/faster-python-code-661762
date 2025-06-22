@@ -1,8 +1,13 @@
-"""Calculate grades - bisect example"""
+"""Calculate grades - bisect example
+This script uses binary search to find the appropriate letter grade
+which has a O(log n) complexity compared to the O(n) complexity of the
+grade function.
+"""
 from bisect import bisect
 
 cutoffs = [60, 70, 80, 90]
 names = 'FDCBA'
+
 
 def grade(score):
     """Give a letter grade from numeric score
@@ -15,6 +20,7 @@ def grade(score):
             return name
     return 'A'
 
+
 def grade2(score):
     """Give a letter grade from numeric score
 
@@ -23,6 +29,7 @@ def grade2(score):
     """
     i = bisect(cutoffs, score)
     return names[i]
+
 
 def test_grades(fn=grade):
     cases = [

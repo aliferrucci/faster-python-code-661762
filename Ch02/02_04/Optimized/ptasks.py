@@ -1,4 +1,6 @@
-"""Priority task queue - heap example"""
+"""Priority task queue - heap example
+Heaps have a O(log n) complexity for push and pop operations,
+"""
 
 from heapq import heappop, heappush
 from random import random, seed, randint
@@ -6,6 +8,7 @@ from random import random, seed, randint
 
 class PriorityQueue:
     """Priority queue using list + sort"""
+
     def __init__(self):
         self._tasks = []
 
@@ -19,8 +22,10 @@ class PriorityQueue:
     def __len__(self):
         return len(self._tasks)
 
+
 class HPriorityQueue:
     """Priority queue using heap"""
+
     def __init__(self):
         self._tasks = []
 
