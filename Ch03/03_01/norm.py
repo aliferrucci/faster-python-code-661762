@@ -1,5 +1,6 @@
 """Name caching"""
 
+
 class config:
     """Global configuration"""
     factor = 7.3
@@ -16,6 +17,10 @@ def normalize(numbers):
     return norm
 
 
+# Ipython: %run norm.py
+# %timeit normalize(numbers)
+# import dis
+# dis.dis(normal) which shows several loads/look-ups for factor/threshold
 if __name__ == '__main__':
     import random
 

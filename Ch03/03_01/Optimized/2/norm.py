@@ -1,5 +1,6 @@
 """Name caching"""
 
+
 class config:
     """Global configuration"""
     factor = 7.3
@@ -35,13 +36,14 @@ def normalize3(numbers):
     fact = config.factor
 
     norm = []
-    append = norm.append
+    append = norm.append  # to remove the lookup
 
     for num in numbers:
         if num > thr:
             num /= fact
         append(num)
     return norm
+
 
 if __name__ == '__main__':
     import random

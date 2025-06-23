@@ -1,5 +1,6 @@
 """Name caching"""
 
+
 class config:
     """Global configuration"""
     factor = 7.3
@@ -15,6 +16,7 @@ def normalize(numbers):
         norm.append(num)
     return norm
 
+# Although this is faster there is less optimization
 def normalize2(numbers):
     """Normalize list of numbers, caching names"""
     thr = config.threshold
@@ -26,6 +28,7 @@ def normalize2(numbers):
             num /= fact
         norm.append(num)
     return norm
+
 
 if __name__ == '__main__':
     import random
