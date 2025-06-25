@@ -20,6 +20,8 @@ def spell(word, count=10, dict_words=None):
     return sorted(dict_words, key=lambda dw: levenshtein(word, dw))[:count]
 
 
+# Run in terminal: time python <program name> <word>
+# Clear cache: python spell.py --clear-cache
 if __name__ == '__main__':
     from argparse import ArgumentParser
 
