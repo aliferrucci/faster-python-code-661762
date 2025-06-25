@@ -7,6 +7,9 @@ def unpack(requests):
     return [bz2.decompress(request) for request in requests]
 
 
+# In ipython: %run proc_pool.py
+# %time _ = unpack(requests)
+# The CPU and Wall are equal meaning more computation time
 if __name__ == '__main__':
     with open('huck-finn.txt', 'rb') as fp:
         data = fp.read()

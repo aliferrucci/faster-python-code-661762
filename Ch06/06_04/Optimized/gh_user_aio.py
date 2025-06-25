@@ -19,6 +19,7 @@ User = namedtuple('User', 'login name joined')
 
 async def user_info_aio(login, acc):
     """Get user information from GitHub"""
+    # attemps a connection and waits allowing for other jobs
     reader, writer = await asyncio.open_connection(host, 443, ssl=True)
     request = request_template.format(login)
     writer.write(request.encode('utf-8'))
@@ -26,6 +27,7 @@ async def user_info_aio(login, acc):
     in_body = False
     body = []
 
+    # waits for a line from the socket
     async for line in reader:
         if line[:1] == b'{':
             in_body = True

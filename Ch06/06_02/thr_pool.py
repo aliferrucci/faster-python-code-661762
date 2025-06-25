@@ -22,6 +22,10 @@ def users_info(logins):
     return [user_info(login) for login in logins]
 
 
+# In ipython:
+# %run thr_pool
+# %time users_info(logins)
+# Shows CPU < wall time which means waiting a lot for I/O
 if __name__ == '__main__':
     logins = [
         'gvanrossum',

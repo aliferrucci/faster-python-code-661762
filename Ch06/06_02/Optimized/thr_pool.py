@@ -24,7 +24,9 @@ def users_info(logins):
 
 
 def users_info_thr(logins):
-    """Get user information for several users - using thread pool"""
+    """Get user information for several users - using thread pool
+    Runs all request concurrently
+    """
     with ThreadPoolExecutor() as pool:
         return list(pool.map(user_info, logins))
 
